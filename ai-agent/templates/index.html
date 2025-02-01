@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Sage</title>
+
+    <style>
+        body,
+        html {
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        .background {
+            background-image: url('https://image.slidesdocs.com/responsive-images/background/cute-medical-white-nurse-holiday-festival-powerpoint-background_958557d892__960_540.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100%;
+        }
+
+        .background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        #title {
+            text-align: center;
+            font-size: 55px;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #recommendation {
+            width: 70%;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="content">
+            <div id="title"><b>Crypto Sage</b></div>
+
+            <form action="/response" method="post">
+                <label for="user_input">Ask anything about crypto:</label><br>
+                <textarea id="user_input" name="user_input" rows="4"></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            {% if response %}
+            <div id="recommendation">
+                <h2>Response</h2>
+                <p><strong>Response:</strong> {{ response }}</p>
+            </div>
+            {% endif %}
+
+            {% if error %}
+            <div id="recommendation">
+                <h2>Error</h2>
+                <p class="error">{{ error }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
