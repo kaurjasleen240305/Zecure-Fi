@@ -9,7 +9,7 @@
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/project_architecture.png)
 
-##Glimpses OF Zecure-Fi
+## Glimpses OF Zecure-Fi
 
 ## ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./images/cover.png)
 
