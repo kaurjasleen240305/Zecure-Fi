@@ -39,7 +39,9 @@ npm install
 npm run dev
 ```
 
--To start the flask server for AI agent run and check ```http://localhost:5000```:-
+- Set up the following environment variables in ```ai-agent/.env.sample```
+
+- To start the flask server for AI agent run and check ```http://localhost:5000```:-
 ```
 pip install -r requirements.txt
 python chatbot-flask.py
